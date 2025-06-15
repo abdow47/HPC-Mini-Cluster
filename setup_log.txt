@@ -1,0 +1,26 @@
+
+### Simulated MPI and Python Setup
+
+```bash
+sudo apt update
+sudo apt install openmpi-bin libopenmpi-dev
+sudo apt install python3 python3-pip
+pip3 install mpi4py scikit-learn pandas numpy
+```
+
+
+
+
+### Simulated Docker and Spark Setup
+
+```bash
+sudo apt update
+sudo apt install docker.io
+sudo usermod -aG docker student
+docker swarm init --advertise-addr 192.168.56.10
+docker swarm join --token <token> 192.168.56.10:2377 
+docker node ls
+```
+
+
+
